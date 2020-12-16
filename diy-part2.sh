@@ -17,3 +17,5 @@ sed -i 's/root::0:0:99999:7:::/root:$1$FHLZsCKT$LvLemPCPOEofaV5pyBWhP0:0:0:99999
 
 echo '修改时区'
 sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" package/base-files/files/bin/config_generate
+# '修改baidupcs-web'
+sed -i 's/PKG_ARCH_BAIDUPCS-WEB:=86/PKG_ARCH_BAIDUPCS-WEB:=386/g' package/lean/baidupcs-web/Makefile
